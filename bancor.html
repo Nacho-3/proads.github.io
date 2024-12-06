@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo_proa.ico">
+    <title>Pasantías Bancor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3a50;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+        .logo { width: 60px; height: auto; }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(5) a::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(5) a:hover::after {
+            background-color: #fff;
+        }
+
+        .company-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(145deg, #e0ffe0, #ffffff);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .company-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .company-header h1 {
+            color: #2d3a50;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+
+        .company-header h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff5959, #ff8f59);
+            border-radius: 2px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #2d3a50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            border-bottom: 3px solid #ff5959;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .period-info, .tasks-info {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .period-info:hover, .tasks-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .content-text p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+
+        .content-images {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .content-images img {
+            max-width: 100%;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .content-images img:first-child {
+            border: 8px solid white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .content-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .company-logo {
+            max-width: 300px;
+            margin-top: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            transition: all 0.3s ease;
+        }
+
+        .company-logo:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-content {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .content-text {
+                padding: 10px;
+            }
+
+            .company-header h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header> 
+        <img src="logo_proa.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nuestra_mision.html">NUESTRA MISIÓN</a></li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+                <li><a href="contactos.html" >CONTACTOS</a></li>
+                <li><a href="pasantias.html" class="selected">PASANTÍAS</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="company-content">
+        <div class="company-header">
+            <h1>Banco Córdoba</h1>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-text">
+                <div class="period-info">
+                    <h2 class="section-title">Periodo y duración</h2>
+                    <p>Las pasantías se desarrollaron desde el día 1/7/2024 hasta el día 23/8/2024. Se desarrolló en jornadas diarias en el horario de atención al público (de 8:00 a 12:00hs).</p>
+                </div>
+
+                <div class="tasks-info">
+                    <h2 class="section-title">Tareas</h2>
+                    <ul>
+                        <li>Atención al cliente</li>
+                        <li>Asistencia en el uso de servicios del banco</li>
+                        <li>Organización de registros de firmas</li>
+                        <li>Organización y atesoramiento de tarjetas</li>
+                        <li>Elaboración de legajos</li>
+                        <li>Su tutor fue José María Gómez y responsable de pasantías profe Irene Girardi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-images">
+                <img src="bancor_img1.jpg" alt="Estudiantes en Bancor">
+                <img src="bancor.png" alt="Logo Bancor" class="company-logo">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

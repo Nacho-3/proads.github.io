@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo_proa.ico">
+    <title>Pasantias Tecnoteca</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3a50;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+        .logo { width: 60px; height: auto; }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(5) a::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(5) a:hover::after {
+            background-color: #fff;
+        }
+
+        .company-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(145deg, #e6f7ff, #f0f9ff);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .content-text {
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #1a365d;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            border-bottom: 3px solid #4299e1;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .content-text p {
+            color: #2d3748;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+
+        .tasks-info {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .tasks-info:hover {
+            transform: translateY(-5px);
+        }
+
+        .tasks-info ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .tasks-info ul li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+            color: #4a5568;
+        }
+
+        .tasks-info ul li:before {
+            content: "•";
+            color: #4299e1;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .content-images {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .content-images img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .content-images img:first-child {
+            border: 8px solid white;
+        }
+
+        .content-images img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .company-logo {
+            max-width: 300px;
+            margin-top: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .task-category {
+            font-weight: bold;
+            color: #2b6cb0;
+            margin: 15px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-content {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .content-text {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo_proa.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nuestra_mision.html">NUESTRA MISIÓN</a></li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+                <li><a href="contactos.html" >CONTACTOS</a></li>
+                <li><a href="pasantias.html" class="selected">PASANTÍAS</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="company-content">
+        <div class="content-grid">
+            <div class="content-text">
+                <div class="tasks-info">
+                    <h2 class="section-title">Periodo y duración</h2>
+                    <p>Las pasantías se desarrollarán desde el 14 de agosto hasta el 09 de septiembre de 2024. La duración y la carga horaria de las pasantías educativas se definió en el convenio individual por un plazo máximo de DOSCIENTAS HORAS (200), con no más de CUATRO (4) horas diarias de trabajo. Los estudiantes concurrieron de lunes a viernes de 8 a 12 hs. Por el período de 5 semanas consecutivas.</p>
+                </div>
+
+                <div class="tasks-info">
+                    <h2 class="section-title">Actividades</h2>
+                    
+                    <div class="task-category">1. Recorrido Tecnoteca</div>
+                    <ul>
+                        <li>Impresiones 3D</li>
+                        <li>Planetario</li>
+                        <li>Robótica</li>
+                        <li>FC 24 (FiFa)</li>
+                        <li>Edición de fotografía y fotografía con el celular</li>
+                    </ul>
+
+                    <div class="task-category">2. Mantenimiento de PC</div>
+                    <div class="task-category">3. Manejo de redes sociales</div>
+
+                    <div class="task-category">4. Desarrollo de Software</div>
+                    <ul>
+                        <li>Realizar una aplicación, registro de ingreso de personas (datos personales y para qué visita la tecnoteca)</li>
+                    </ul>
+
+                    <div class="task-category">5. Talleres</div>
+                    <ul>
+                        <li>Informática básica para adultos</li>
+                        <li>Uso del celular para adultos</li>
+                        <li>Tres Niveles</li>
+                        <li>Robótica para chicos</li>
+                        <li>Videojuegos</li>
+                        <li>Electricidad y Magnetismo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-images">
+                <img src="tecnoteca_img1.jpeg" alt="Estudiantes en Tecnoteca">
+                <img src="tecnoteca.png" alt="Logo Tecnoteca" class="company-logo">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

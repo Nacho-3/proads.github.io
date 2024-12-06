@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo_proa.ico">
+    <title>Nuestra Misión</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3a50;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+        .logo { width: 60px; height: auto; }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            background-color: #ff5959;
+        }
+
+        nav ul li:nth-child(2) a::after {
+            background-color: #ff5959;
+        }
+
+        nav ul li:nth-child(2) a:hover::after {
+            background-color: #fff;
+        }
+
+        .banner {
+            background-color: #4a6c8c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mission-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .mission-box {
+            background-color: #e6e6e6;
+            padding: 25px;
+            border-radius: 10px;
+            position: relative;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .mission-box h2 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .mission-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .circle-graphic {
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(
+                #2d3a50 0deg 90deg,
+                #3d4a60 90deg 180deg,
+                #4d5a70 180deg 270deg,
+                #5d6a80 270deg 360deg
+            );
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .circle-graphic::after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle-graphic {
+            color: transparent;
+        }
+
+        .contact-section {
+            flex: 1;
+            background-color: #4a6c8c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - var(--header-height));
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 3rem;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            align-content: center;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-circle {
+            width: 200px;
+            height: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-circle {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo_proa.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nuestra_mision.html" class="selected">NUESTRA MISIÓN</a></li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+                <li><a href="contactos.html">CONTACTOS</a></li>
+                <li><a href="pasantias.html">PASANTÍAS</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2>Nuestra Misión</h2>
+    </div>
+
+    <main class="mission-section">
+        <div class="mission-box">
+            <h2>Desarrollo Integral de Software y Metodologías Innovadoras</h2>
+            <p><strong>Habilidades en Programación y Metodologías Modernas:</strong> Los estudiantes aprenden a desarrollar software en distintos lenguajes y a aplicar metodologías avanzadas.</p>
+            <p><strong>Preparación Técnica Sólida:</strong> La formación brinda una base tecnológica robusta y conocimientos fundamentales.</p>
+            <p><strong>Adaptabilidad e Innovación:</strong> Desarrollan habilidades para adaptarse a un entorno laboral cambiante, fomentando la versatilidad y la creatividad en la resolución de problemas.</p>
+        </div>
+        
+        <div class="mission-box">
+            <h2>Documentación Exhaustiva y Resolución Técnica</h2>
+            <p><strong>Interpretación y Documentación Precisa:</strong> Los estudiantes aprenden a interpretar especificaciones de diseño y documentar cada desarrollo en detalle.</p>
+            <p><strong>Resolución Eficiente de Problemas Técnicos:</strong> Se capacitan en identificar y corregir problemas de software, adaptándose a cambios en los requisitos del cliente.</p>
+            <p><strong>Fomento de Autonomía y Responsabilidad:</strong> Esta formación impulsa su conocimiento como profesionales autónomos y responsables.</p>
+        </div>
+        
+        <div class="mission-box">
+            <h2>Diseño de Productos Digitales Creativos y Multimedia</h2>
+            <p><strong>Diseño y Desarrollo de Productos Digitales:</strong> Los estudiantes crean productos multimedia integrando sonido, imágenes y video.</p>
+            <p><strong>Enfoque Creativo y Analítico:</strong> Combina creatividad y análisis para enfrentar problemas reales en cada proyecto.</p>
+            <p><strong>Preparación para Soluciones de Alto Impacto:</strong> Se capacitan para ofrecer soluciones relevantes en un entorno cada vez más orientado a lo multimedia.</p>
+        </div>
+        
+        <div class="mission-box">
+            <h2>Trabajo Colaborativo y Pensamiento Crítico</h2>
+            <p><strong>Fomento del Trabajo en Equipo:</strong> Los estudiantes aprenden a colaborar, realizando aportes constructivos en un entorno de trabajo conjunto.</p>
+            <p><strong>Desarrollo de Pensamiento Crítico:</strong> Se promueve el pensamiento crítico para crear y compartir conocimientos de manera efectiva.</p>
+            <p><strong>Habilidades de Comunicación y Respeto:</strong> Fortalece la comunicación efectiva y el respeto por la diversidad de ideas, esenciales para su éxito personal y profesional.</p>
+        </div>
+    </main>
+</body>
+</html>

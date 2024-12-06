@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo_proa.ico">
+    <title>Noticias</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3a50;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+        .logo { width: 60px; height: auto; }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(3) a::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(3) a:hover::after {
+            background-color: #fff;
+        }
+
+        .news-container {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-container h1 {
+            color: #2d3a50;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            display: block;
+            text-decoration: none;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            min-width: 280px;
+            max-width: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card-content {
+            padding: 1.5rem;
+        }
+
+        .news-card h3 {
+            color: #2d3a50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .news-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo_proa.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nuestra_mision.html">NUESTRA MISIÓN</a></li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+                <li><a href="contactos.html">CONTACTOS</a></li>
+                <li><a href="pasantias.html">PASANTÍAS</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="news-container">
+        <h1>NOTICIAS</h1>
+        
+        <div class="news-grid">
+            <a href="https://www.lavozdesanjusto.com.ar/habilitaron-el-edificio-proa-la-escuela-especializada-en-software-en-barrio-la-milka" target="_blank" class="news-card">
+                <img src="habilitanedificio.jpg" alt="Noticia 1">
+                <div class="news-card-content">
+                    <h3>Habilitaron el edificio ProA, la escuela especializada en software en barrio La Milka</h3>
+                    <p>Actualmente cuenta con 115 estudiantes pero tiene capacidad para 180. Posee cuatro aulas, laboratorio de Informática y de Ciencias Naturales, taller de arte, robótica, espacios de esparcimiento, recreación y otras modernas instalaciones.</p>
+                </div>
+            </a>
+
+            <a href="https://www.lavozdesanjusto.com.ar/como-se-crea-una-aplicacion-movil-la-experiencia-en-la-proa-de-la-milka" target="_blank" class="news-card">
+                <img src="CreacióndeAppsMóvilesenPROA.jpg" alt="Noticia 2">
+                <div class="news-card-content">
+                    <h3>Creación de Apps Móviles en PROA</h3>
+                    <p>Experiencia de estudiantes en el desarrollo de aplicaciones móviles en la escuela PROA.</p>
+                </div>
+            </a>
+
+            <a href="https://el-periodico.com.ar/local/estudiantes-de-proa-software-se-consagraron-ganadores-del-primer--san-francisco-debate-_a6682c872865bdb1c1b3c798d" target="_blank" class="news-card">
+                <img src="debatesanfco.webp" alt="Noticia 3">
+                <div class="news-card-content">
+                    <h3>Estudiantes PROA Ganan Debate</h3>
+                    <p>Alumnos de PROA Software se coronan campeones en el primer debate de San Francisco.</p>
+                </div>
+            </a>
+
+            <a href="https://www.cba.gov.ar/cba-no-para/san-francisco-llaryora-inauguro-la-escuela-proa-evelina-feraudo/" target="_blank" class="news-card">
+                <img src="inauguracion.jpg" alt="Noticia 4">
+                <div class="news-card-content">
+                    <h3>se inauguró la escuela ProA “Evelina Feraudo”</h3>
+                    <p>El flamante edificio, que ya es ocupado por sus alumnos desde octubre pasado, tiene una superficie de 1.596 metros cuadrados, distribuidos en 4 aulas y 3 talleres: info-arte, ciencias e informática.</p>
+                </div>
+            </a>
+
+            <a href="https://el-periodico.com.ar/buen-comer/la-escuela-proa-software-vende-porciones-de-locro-para-costear-dos-proyectos_a6682bcc8865bdb1c1b3c40bc" target="_blank" class="news-card">
+                <img src="locro.webp" alt="Noticia 5">
+                <div class="news-card-content">
+                    <h3>La escuela Proa Software vende porciones de locro para costear proyectos</h3>
+                    <p>Por un lado, buscan juntar dinero para un viaje educativo; por el otro, para colaborar con Cooperadora en la compra de un carro para transportar computadoras.</p>
+                </div>
+            </a>
+
+            <a href="https://radiocanal.com.ar/noticia/la-escuela-proa-evelina-feraudo-celebro-el-dia-de-la-tradicion-con-un-patio-criollo-170231" target="_blank" class="news-card">
+                <img src="patiocriollo.png" alt="Noticia 6">
+                <div class="news-card-content">
+                    <h3>La Escuela ProA Evelina Feraudo celebró el día de la tradición con un Patio Criollo</h3>
+                    <p>Con motivo del Día de la Tradición, la Escuela ProA Prof. Evelina Feraudo realizó un emotivo Patio Criollo organizado por el centro de estudiantes, donde se representaron las distintas provincias argentinas.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

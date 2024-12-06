@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo_proa.ico">
+    <title>Pasantias</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d3a50;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+        .logo { width: 60px; height: auto; }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(5) a::after {
+            background-color: #ff5959;
+        }
+        nav ul li:nth-child(5) a:hover::after {
+            background-color: #fff;
+        }
+
+        .internships {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .description {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+
+        .description p {
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .company-card {
+            text-decoration: none;
+            display: block;
+            min-width: 280px;
+            max-width: 100%;
+            background-color: #dde1e7;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: -3px -3px 7px #ffffff73,
+                        3px 3px 5px rgba(94, 104, 121, 0.288);
+            cursor: pointer;
+        }
+
+        .company-card:hover {
+            transform: translateY(-10px);
+            box-shadow: -5px -5px 10px #ffffff73,
+                        5px 5px 10px rgba(94, 104, 121, 0.4);
+        }
+
+        .company-image {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .company-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            margin: auto;
+            display: block;
+        }
+
+        .company-card:hover .company-image img {
+            transform: scale(1.1);
+        }
+
+        .company-card h3 {
+            color: #2B3242;
+            font-size: 24px;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            transition: color 0.3s ease;
+        }
+
+        .company-card:hover h3 {
+            color: #ff5959;
+        }
+
+        @media (max-width: 768px) {
+            .companies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tecnoteca-img {
+            object-position: center 25%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo_proa.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nuestra_mision.html">NUESTRA MISIÓN</a></li>
+                <li><a href="noticias.html">NOTICIAS</a></li>
+                <li><a href="contactos.html" >CONTACTOS</a></li>
+                <li><a href="pasantias.html" class="selected">PASANTÍAS</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="internships">
+        <div class="description">
+            <p>El Proyecto de Pasantías No rentadas es parte del programa del Ciclo Orientado con formación especializada en Desarrollo de Software, que se desarrolla en el marco del Espacio Curricular Formación para la Vida y el Trabajo, dicho proyecto ofrece el estudiante la oportunidad de alcanzar y/o fortalecer aprendizajes afines a su formación académica y como práctica laboral le permite desarrollar tareas en diversos ámbitos del mundo del trabajo.</p>
+        </div>
+
+        <div class="companies-grid">
+            <a href="cubits.html" class="company-card">
+                <div class="company-image">
+                    <img src="cubits.png" alt="Cubits">
+                </div>
+                <h3>Cubits</h3>
+            </a>
+
+            <a href="tecnoteca.html" class="company-card">
+                <div class="company-image">
+                    <img src="tecnoteca.png" alt="Tecnoteca" class="tecnoteca-img">
+                </div>
+                <h3>Tecnoteca</h3>
+            </a>
+
+            <a href="bancor.html" class="company-card">
+                <div class="company-image">
+                    <img src="bancor.png" alt="Bancor">
+                </div>
+                <h3>Bancor</h3>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
